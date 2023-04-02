@@ -3,8 +3,8 @@ def read_input():
     if "F" in source:
         filename = input()
         with open("tests/" + filename, 'r', encoding = "utf-8") as f:
-            pattern = f.readline().rstrip()
-            text = f.readline().rstrip()
+            pattern = f.readline()
+            text = f.readline()
     elif "I" in source:
         pattern = input().rstrip()
         text = input().rstrip()
