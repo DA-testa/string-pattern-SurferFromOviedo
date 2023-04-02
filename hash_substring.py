@@ -1,12 +1,13 @@
 def read_input():
-    source = input()
-    if "F" in source:
-        with open("tests/06", 'r', encoding = "utf-8") as f:
-            pattern = f.readline()
-            text = f.readline()
-    elif "I" in source:
+    input_choice = input().rstrip()
+    if input_choice == 'I':
         pattern = input().rstrip()
         text = input().rstrip()
+    else:
+        with open(f"tests/06", "r") as f:
+            inputl = f.readlines()
+            pattern = inputl[0].rstrip()
+            text = inputl[1].rstrip()
     return (pattern, text)
 
 def print_occurrences(output):
