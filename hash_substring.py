@@ -7,8 +7,8 @@ def read_input():
     elif input_type == 'F':
         filename = input()
         with open("test/" + filename, 'r') as f:
-            pattern = f.readline().rstrip()
-            text = f.readline().rstrip()
+            pattern = f.readline()
+            text = f.readline()
     return (pattern, text)
 
 def print_occurrences(output):
