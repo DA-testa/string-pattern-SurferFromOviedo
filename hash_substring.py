@@ -1,14 +1,13 @@
 def read_input():
-    input_type = input().rstrip()
-
-    if input_type == 'I':
-        pattern = input().rstrip()
-        text = input().rstrip()
-    elif input_type == 'F':
+    source = input()
+    if "F" in source:
         filename = input()
         with open("tests/" + filename, 'r', encoding = "utf-8") as f:
-            pattern = f.readline()
-            text = f.readline()
+            pattern = f.readline().rstrip()
+            text = f.readline().rstrip()
+    elif "I" in source:
+        pattern = input().rstrip()
+        text = input().rstrip()
     return (pattern, text)
 
 def print_occurrences(output):
@@ -32,4 +31,5 @@ def get_occurrences(pattern, text):
 
 if __name__ == '__main__':
     print_occurrences(get_occurrences(*read_input()))
+
 
