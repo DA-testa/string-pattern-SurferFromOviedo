@@ -6,7 +6,7 @@ def read_input():
         text = input().rstrip()
     elif input_type == 'F':
         filename = input()
-        with open("test/" + filename, 'r') as f:
+        with open("tests/" + filename, 'r', encoding = "utf-8") as f:
             pattern = f.readline()
             text = f.readline()
     return (pattern, text)
